@@ -1,16 +1,16 @@
 <template>
-  <div class="home">
-    <login></login>
+  <div class="about">
+      <form-a></form-a>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import login from "@/components/login";
+import formA from "@/components/formA";
 export default {
   name: 'Home',
   components: {
-    login
+    formA
   }
 }
 </script>

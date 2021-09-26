@@ -1,0 +1,44 @@
+{
+  "id": "2836962",
+  "name": "广告",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "2471334",
+      "name": "表单",
+      "font_class": "biaodan",
+      "unicode": "e665",
+      "unicode_decimal": 58981
+    },
+    {
+      "icon_id": "2674472",
+      "name": "返回",
+      "font_class": "fanhui",
+      "unicode": "e624",
+      "unicode_decimal": 58916
+    },
+    {
+      "icon_id": "5387904",
+      "name": "相机_o",
+      "font_class": "xiangji_o",
+      "unicode": "eb86",
+      "unicode_decimal": 60294
+    },
+    {
+      "icon_id": "6527112",
+      "name": "计划",
+      "font_class": "jihua",
+      "unicode": "e643",
+      "unicode_decimal": 58947
+    },
+    {
+      "icon_id": "12719937",
+      "name": "发送",
+      "font_class": "fasong",
+      "unicode": "e60d",
+      "unicode_decimal": 58893
+    }
+  ]
+}
