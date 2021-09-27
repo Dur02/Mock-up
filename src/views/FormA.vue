@@ -1,6 +1,6 @@
 <template>
-  <div class="about">
-      <form-a></form-a>
+  <div>
+    <form-a></form-a>
   </div>
 </template>
 
@@ -8,7 +8,7 @@
 // @ is an alias to /src
 import formA from "@/components/formA";
 export default {
-  name: 'Home',
+  name: 'Form_A',
   components: {
     formA
   }

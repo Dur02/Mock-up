@@ -45,6 +45,7 @@ export default {
   methods:{
     toFormA () {
       this.$router.push('/FormA')
+      // this.$store.commit("changeA")
     }
   }
 }
