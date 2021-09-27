@@ -2,26 +2,15 @@ import { createStore } from 'vuex'
 
 export default createStore({
   state: {
-    // activeA: false,
-    // PlanActive:false,
-    // activeB:false,
+    load:0
   },
   mutations: {
-    // changeA (){
-    //   this.store.state.activeA = true
-    //   this.store.state.activeB = false
-    //   this.store.state.PlanActive = false
-    // },
-    // changePlan (){
-    //   this.store.state.PlanActive = true
-    //   this.store.state.activeB = false
-    //   this.store.state.activeA = false
-    // },
-    // changeB (){
-    //   this.store.state.activeB = true
-    //   this.store.state.activeA = false
-    //   this.store.state.PlanActive = false
-    // },
+    loading(){
+      this.state.load = 1
+    },
+    loaded(){
+      this.state.load = 0
+    }
   },
   actions: {
   },

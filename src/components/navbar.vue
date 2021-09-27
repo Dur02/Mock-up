@@ -1,4 +1,5 @@
 <template>
+
   <a-menu mode="horizontal" class="navbar">
     <a-row class="navbar_row">
       <a-col :span="4" class="navbar_title">
@@ -8,7 +9,7 @@
         <span>{{navTitle}}</span>
       </a-col>
       <a-col :span="4" class="navbar_title">
-        <i class="iconfont icon-fasong send_disable"></i>
+        <i class="iconfont icon-fasong" :class="{'send_disable':!sendFun,'send_enable':sendFun}" @click="Submit"></i>
       </a-col>
     </a-row>
   </a-menu>
@@ -34,7 +35,7 @@ export default {
   name: "navbar",
   data () {
     return {
-
+      sendFun:false,
     }
   },
   methods: {
@@ -45,26 +46,38 @@ export default {
 
     },
     toPlanActive () {
-      if (this.$route.fullPath === '/FormB' ) {
+      // console.log(this.$route)
+      if (this.$route.path === '/FormB' ) {
         this.$router.push('/Plan')
       }
-
     },
     back () {
       if (this.$route.fullPath === '/FormA'){
         this.$router.push('/Home')
       }else if (this.$route.fullPath === '/Plan' ){
         this.$router.push('/FormA')
-      }else if (this.$route.fullPath === '/FormB' ){
+      }else if (this.$route.path === '/FormB' ){
         this.$router.push('/Plan')
       }
+    },
+    Submit() {
+      if (this.$route.path === '/FormB'){
+        this.sendFun = true
+      }
+      if (this.sendFun === true){
+        this.$store.commit('loading')
+        setTimeout(this.StopLoading,3000)
+      }
+    },
+    StopLoading () {
+      this.$store.commit('loaded')
     }
   },
   props:{
     activeA:String,
     activeB:String,
     planActive:String,
-    navTitle:String
+    navTitle:String,
   }
 }
 </script>
@@ -90,7 +103,10 @@ export default {
   text-align: center;
 }
 .send_disable{
-  color: rgba(0,119,170,0.8);
+  color: rgba(0,0,0,0.8);
+}
+.send_enable{
+  color: rgba(0,0,0,1);
 }
 .icon-biaodan span{
   font-size: 4px;

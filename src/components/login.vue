@@ -29,7 +29,7 @@
     </a-layout-content>
 
     <a-layout-footer class="footer">
-      <a-row class="footer_row">
+      <a-row>
         <a-col :span="24">
           <img src="@/assets/login.png" class="log_img"/>
         </a-col>
@@ -62,9 +62,6 @@ export default {
 .footer{
   background-color: white;
   padding: 0px;
-}
-.footer_row{
-
 }
 .log_img{
   width:100%;
